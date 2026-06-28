@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <title data-i18n="pageTitle">ياسر كوم | خدمات ستارلينك وفيزا وماستر كارد</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══ NAVBAR ══ -->
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="#" class="logo">
+            <!-- LOGO SVG inline -->
+            <div class="logo-icon-svg">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="nav-logo-svg">
+                  <circle cx="50" cy="50" r="48" fill="#1a3a8a"/>
+                  <g fill="#FFD700">
+                    <!-- center circle + diamond -->
+                    <circle cx="50" cy="50" r="9"/>
+                    <polygon points="50,41 56,50 50,59 44,50"/>
+                    <!-- 8 arms -->
+                    <g id="arm">
+                      <rect x="48" y="22" width="4" height="14" rx="2"/>
+                      <!-- wifi arc small -->
+                      <path d="M44,20 Q50,15 56,20" stroke="#FFD700" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                      <path d="M41,17 Q50,10 59,17" stroke="#FFD700" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    </g>
+                    <use href="#arm" transform="rotate(45,50,50)"/>
+                    <use href="#arm" transform="rotate(90,50,50)"/>
+                    <use href="#arm" transform="rotate(135,50,50)"/>
+                    <use href="#arm" transform="rotate(180,50,50)"/>
+                    <use href="#arm" transform="rotate(225,50,50)"/>
+                    <use href="#arm" transform="rotate(270,50,50)"/>
+                    <use href="#arm" transform="rotate(315,50,50)"/>
+                  </g>
+                </svg>
+            </div>
+            <span class="logo-text">ياسر <span>كوم</span></span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="قائمة">
+            <i class="fas fa-bars" id="hamburgerIcon"></i>
+        </button>
+        <ul class="nav-links" id="navMenu">
+            <li><a href="#hero" data-i18n="navHome">الرئيسية</a></li>
+            <li><a href="#services" data-i18n="navServices">الخدمات</a></li>
+            <li><a href="#payments" data-i18n="navPayments">مواقع الدفع</a></li>
+            <li><a href="#about" data-i18n="navAbout">حول</a></li>
+            <li><a href="#contact" data-i18n="navContact">تواصل معنا</a></li>
+            <li><a href="#contact" class="nav-cta" data-i18n="navCta">ابدأ الآن</a></li>
+        </ul>
+        <div class="nav-tools">
+            <button class="tool-btn" id="themeToggle" aria-label="تغيير الوضع">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+            <div class="lang-wrap" id="langWrap">
+                <button class="tool-btn lang-btn" id="langToggle">
+                    <i class="fas fa-globe"></i>
+                    <span id="langLabel">ع</span>
+                </button>
+                <div class="lang-dropdown" id="langDropdown">
+                    <button class="lang-opt active" data-lang="ar">🇸🇩 عربي</button>
+                    <button class="lang-opt" data-lang="en">🇬🇧 English</button>
+                    <button class="lang-opt" data-lang="fr">🇫🇷 Français</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="hero">
+    <div class="hero-bg">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+        <div class="orb orb3"></div>
+        <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.04" xmlns="http://www.w3.org/2000/svg">
+            <defs><pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+                <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#fff" stroke-width="0.5"/>
+            </pattern></defs>
+            <rect width="100%" height="100%" fill="url(#grid)"/>
+        </svg>
+    </div>
+    <div class="hero-content">
+        <!-- BIG ANIMATED LOGO -->
+        <div class="hero-logo-wrap">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="hero-logo-svg">
+              <defs>
+                <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#1e4db7"/>
+                  <stop offset="100%" stop-color="#0a1e5e"/>
+                </radialGradient>
+              </defs>
+              <circle cx="100" cy="100" r="98" fill="url(#bgGrad)" class="logo-bg-circle"/>
+              <g fill="#FFD700" class="logo-gold">
+                <circle cx="100" cy="100" r="17"/>
+                <polygon points="100,83 112,100 100,117 88,100"/>
+                <g id="bigarm">
+                  <rect x="96" y="40" width="8" height="28" rx="4"/>
+                  <path d="M88,38 Q100,28 112,38" stroke="#FFD700" stroke-width="4" fill="none" stroke-linecap="round"/>
+                  <path d="M82,32 Q100,20 118,32" stroke="#FFD700" stroke-width="3" fill="none" stroke-linecap="round"/>
+                </g>
+                <use href="#bigarm" transform="rotate(45,100,100)"/>
+                <use href="#bigarm" transform="rotate(90,100,100)"/>
+                <use href="#bigarm" transform="rotate(135,100,100)"/>
+                <use href="#bigarm" transform="rotate(180,100,100)"/>
+                <use href="#bigarm" transform="rotate(225,100,100)"/>
+                <use href="#bigarm" transform="rotate(270,100,100)"/>
+                <use href="#bigarm" transform="rotate(315,100,100)"/>
+              </g>
+            </svg>
+        </div>
+        <div class="hero-badge"><i class="fas fa-circle" style="font-size:0.5rem;color:#22C55E"></i> <span data-i18n="heroBadge">خدمات رقمية ومالية متكاملة في السودان</span></div>
+        <h1><span class="grad">ياسر كوم</span><br><span data-i18n="heroTitle">للخدمات الرقمية والتقنية</span></h1>
+        <p data-i18n="heroDesc">اشتراكات ستارلينك، فيزا وماستر كارد، تبديل العملات، استرجاع الحسابات، الدفع للمواقع العالمية، ودعم فني 24/7</p>
+        <div class="hero-btns">
+            <a href="#services" class="btn btn-primary"><i class="fas fa-rocket"></i> <span data-i18n="heroBtn1">استكشف الخدمات</span></a>
+            <a href="#contact" class="btn btn-ghost"><i class="fab fa-whatsapp"></i> <span data-i18n="heroBtn2">تواصل معنا</span></a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat"><span class="stat-num" id="sUsers">0</span><span class="stat-lbl" data-i18n="stat1">عميل نشط</span></div>
+            <div class="stat"><span class="stat-num" id="sSat">0</span><span class="stat-lbl" data-i18n="stat2">% رضا العملاء</span></div>
+            <div class="stat"><span class="stat-num">24</span><span class="stat-lbl" data-i18n="stat3">/ 7 دعم فني</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- ══ SERVICES ══ -->
+<section class="section section-alt" id="services">
+    <div class="inner">
+        <div class="section-head">
+            <span class="section-tag" data-i18n="svcTag">خدماتنا</span>
+            <h2 data-i18n="svcTitle">ماذا نقدم لك؟</h2>
+            <div class="divider"></div>
+            <p data-i18n="svcDesc">حلول متكاملة تغطي احتياجاتك الرقمية والمالية بكل سهولة وأمان</p>
+        </div>
+        <div class="services-grid">
+
+            <div class="svc-card" data-svc="اشتراكات ستارلينك">
+                <div class="svc-icon-wrap ic-blue"><i class="fas fa-satellite-dish"></i></div>
+                <h3 data-i18n="svc1Title">اشتراكات ستارلينك</h3>
+                <p data-i18n="svc1Desc">تفعيل وتجديد اشتراكات ستارلينك للأفراد والشركات بسرعة وأمان مع ضمان الاتصال الدائم.</p>
+                <div class="svc-tags">
+                    <span class="tag" data-i18n="svc1t1">تفعيل فوري</span>
+                    <span class="tag" data-i18n="svc1t2">تجديد الاشتراك</span>
+                    <span class="tag" data-i18n="svc1t3">دعم كامل</span>
+                </div>
+                <button class="svc-link" data-i18n="orderBtn">طلب الخدمة <i class="fas fa-arrow-left"></i></button>
+            </div>
+
+            <div class="svc-card" data-svc="فيزا وماستر كارد">
+                <div class="svc-icon-wrap ic-cyan"><i class="fas fa-credit-card"></i></div>
+                <h3 data-i18n="svc2Title">فيزا وماستر كارد</h3>
+                <p data-i18n="svc2Desc">إصدار وشحن بطاقات فيزا وماستر كارد للدفع الدولي، مع خدمة تبديل العملات بأفضل الأسعار.</p>
+                <div class="svc-tags">
+                    <span class="tag">Visa</span>
+                    <span class="tag">Mastercard</span>
+                    <span class="tag" data-i18n="svc2t3">تبديل عملات</span>
+                </div>
+                <button class="svc-link" data-i18n="orderBtn">طلب الخدمة <i class="fas fa-arrow-left"></i></button>
+            </div>
+
+            <div class="svc-card" data-svc="استرجاع الحسابات الضائعة">
+                <div class="svc-icon-wrap ic-purple"><i class="fas fa-user-shield"></i></div>
+                <h3 data-i18n="svc3Title">استرجاع الحسابات</h3>
+                <p data-i18n="svc3Desc">استعادة حساباتك الضائعة في منصات التواصل الاجتماعي والبريد الإلكتروني والتطبيقات المختلفة.</p>
+                <div class="svc-tags">
+                    <span class="tag" data-i18n="svc3t1">سوشيال ميديا</span>
+                    <span class="tag" data-i18n="svc3t2">بريد إلكتروني</span>
+                    <span class="tag" data-i18n="svc3t3">تطبيقات</span>
+                </div>
+                <button class="svc-link" data-i18n="orderBtn">طلب الخدمة <i class="fas fa-arrow-left"></i></button>
+            </div>
+
+            <div class="svc-card" data-svc="الدفع للمواقع العالمية">
+                <div class="svc-icon-wrap ic-green"><i class="fas fa-globe-americas"></i></div>
+                <h3 data-i18n="svc4Title">الدفع للمواقع العالمية</h3>
+                <p data-i18n="svc4Desc">دفع آمن وسريع لكبرى المنصات العالمية: أمازون، شي ان، ChatGPT، علي بابا، كانفا، كورسيرا وغيرها.</p>
+                <div class="svc-tags">
+                    <span class="tag">أمازون</span>
+                    <span class="tag">ChatGPT</span>
+                    <span class="tag">كورسيرا</span>
+                </div>
+                <button class="svc-link" data-i18n="orderBtn">طلب الخدمة <i class="fas fa-arrow-left"></i></button>
+            </div>
+
+            <div class="svc-card" data-svc="الدعم الفني على مدار الساعة">
+                <div class="svc-icon-wrap ic-orange"><i class="fas fa-headset"></i></div>
+                <h3 data-i18n="svc5Title">الدعم الفني 24/7</h3>
+                <p data-i18n="svc5Desc">فريق متخصص جاهز لمساعدتك في أي وقت وحل جميع مشكلاتك التقنية على مدار الساعة طوال الأسبوع.</p>
+                <div class="svc-tags">
+                    <span class="tag" data-i18n="svc5t1">24 ساعة</span>
+                    <span class="tag" data-i18n="svc5t2">7 أيام</span>
+                    <span class="tag" data-i18n="svc5t3">استجابة فورية</span>
+                </div>
+                <button class="svc-link" data-i18n="contactBtn">تواصل الآن <i class="fas fa-arrow-left"></i></button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══ PAYMENTS ══ -->
+<section class="section" id="payments">
+    <div class="inner">
+        <div class="section-head">
+            <span class="section-tag" data-i18n="payTag">الدفع العالمي</span>
+            <h2 data-i18n="payTitle">نوصلك لكل المنصات العالمية</h2>
+            <div class="divider"></div>
+            <p data-i18n="payDesc">ندفع نيابةً عنك لأكبر المواقع العالمية بسرعة وأمان</p>
+        </div>
+        <div class="pay-grid">
+            <div class="pay-item" onclick="openModal('الدفع لأمازون')">
+                <div class="pay-logo">🛒</div><span data-i18n="pay1">أمازون</span>
+            </div>
+            <div class="pay-item" onclick="openModal('الدفع لشي ان')">
+                <div class="pay-logo">👗</div><span data-i18n="pay2">شي ان</span>
+            </div>
+            <div class="pay-item" onclick="openModal('الاشتراك في ChatGPT')">
+                <div class="pay-logo">🤖</div><span>ChatGPT</span>
+            </div>
+            <div class="pay-item" onclick="openModal('الدفع لعلي بابا')">
+                <div class="pay-logo">🏪</div><span data-i18n="pay4">علي بابا</span>
+            </div>
+            <div class="pay-item" onclick="openModal('الاشتراك في كانفا')">
+                <div class="pay-logo">🎨</div><span data-i18n="pay5">كانفا</span>
+            </div>
+            <div class="pay-item" onclick="openModal('الاشتراك في كورسيرا')">
+                <div class="pay-logo">📚</div><span data-i18n="pay6">كورسيرا</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══ WHY US ══ -->
+<section class="section section-alt" id="why">
+    <div class="inner">
+        <div class="section-head">
+            <span class="section-tag" data-i18n="whyTag">لماذا ياسر كوم</span>
+            <h2 data-i18n="whyTitle">ثق بنا لأننا نستحق ثقتك</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="why-grid">
+            <div class="why-item"><div class="why-icon">🔒</div><h4 data-i18n="why1h">أمان تام</h4><p data-i18n="why1p">حماية كاملة لبياناتك ومعاملاتك المالية بأعلى معايير الأمان</p></div>
+            <div class="why-item"><div class="why-icon">⚡</div><h4 data-i18n="why2h">سرعة الإنجاز</h4><p data-i18n="why2p">خدمات فورية بدون انتظار، نُنجز طلبك بأسرع وقت ممكن</p></div>
+            <div class="why-item"><div class="why-icon">🕐</div><h4 data-i18n="why3h">دعم 24 / 7</h4><p data-i18n="why3p">فريقنا متاح على مدار الساعة طوال أيام الأسبوع لخدمتك</p></div>
+            <div class="why-item"><div class="why-icon">💎</div><h4 data-i18n="why4h">جودة مضمونة</h4><p data-i18n="why4p">نضمن جودة خدماتنا أو نُعيد لك أموالك كاملةً دون قيد</p></div>
+            <div class="why-item"><div class="why-icon">🌍</div><h4 data-i18n="why5h">وصول عالمي</h4><p data-i18n="why5p">نوصلك لأي موقع أو خدمة عالمية بكل سهولة من السودان</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<section class="section" id="about">
+    <div class="inner">
+        <div class="section-head">
+            <span class="section-tag" data-i18n="aboutTag">حول ياسر كوم</span>
+            <h2 data-i18n="aboutTitle">من نحن؟</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="about-wrap">
+            <div class="about-logo-col">
+                <div class="about-logo-ring">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="about-logo-svg">
+                      <defs>
+                        <radialGradient id="aboutBg" cx="50%" cy="50%" r="50%">
+                          <stop offset="0%" stop-color="#1e4db7"/>
+                          <stop offset="100%" stop-color="#0a1e5e"/>
+                        </radialGradient>
+                      </defs>
+                      <circle cx="100" cy="100" r="98" fill="url(#aboutBg)"/>
+                      <g fill="#FFD700">
+                        <circle cx="100" cy="100" r="17"/>
+                        <polygon points="100,83 112,100 100,117 88,100"/>
+                        <g id="aarm">
+                          <rect x="96" y="40" width="8" height="28" rx="4"/>
+                          <path d="M88,38 Q100,28 112,38" stroke="#FFD700" stroke-width="4" fill="none" stroke-linecap="round"/>
+                          <path d="M82,32 Q100,20 118,32" stroke="#FFD700" stroke-width="3" fill="none" stroke-linecap="round"/>
+                        </g>
+                        <use href="#aarm" transform="rotate(45,100,100)"/>
+                        <use href="#aarm" transform="rotate(90,100,100)"/>
+                        <use href="#aarm" transform="rotate(135,100,100)"/>
+                        <use href="#aarm" transform="rotate(180,100,100)"/>
+                        <use href="#aarm" transform="rotate(225,100,100)"/>
+                        <use href="#aarm" transform="rotate(270,100,100)"/>
+                        <use href="#aarm" transform="rotate(315,100,100)"/>
+                      </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="about-text-col">
+                <p class="about-lead" data-i18n="aboutLead">ياسر كوم — منصة سودانية رائدة في الخدمات الرقمية والمالية، تأسست لتكون الجسر الذي يربط المواطن السوداني بالعالم الرقمي.</p>
+                <p data-i18n="aboutP1">نعمل على تقديم حلول تقنية متكاملة تشمل تفعيل اشتراكات ستارلينك، إصدار بطاقات فيزا وماستر كارد، تبديل العملات بأسعار تنافسية، واسترجاع الحسابات الرقمية المفقودة.</p>
+                <p data-i18n="aboutP2">رؤيتنا أن يتمكن كل سوداني من الوصول إلى أي خدمة رقمية عالمية بكل سهولة ويسر، مع ضمان أعلى معايير الأمان والسرعة في الإنجاز.</p>
+                <div class="about-badges">
+                    <div class="about-badge"><i class="fas fa-shield-alt"></i> <span data-i18n="ab1">موثوقية تامة</span></div>
+                    <div class="about-badge"><i class="fas fa-bolt"></i> <span data-i18n="ab2">خدمة فورية</span></div>
+                    <div class="about-badge"><i class="fas fa-headset"></i> <span data-i18n="ab3">دعم 24/7</span></div>
+                    <div class="about-badge"><i class="fas fa-globe"></i> <span data-i18n="ab4">وصول عالمي</span></div>
+                </div>
+                <a href="#contact" class="btn btn-primary" style="margin-top:1.5rem;display:inline-flex;">
+                    <i class="fas fa-envelope"></i> <span data-i18n="aboutCta">تواصل معنا</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section class="cta-section">
+    <div class="inner">
+        <h2 data-i18n="ctaTitle">جاهز للبدء اليوم؟</h2>
+        <p data-i18n="ctaDesc">تواصل معنا الآن واحصل على خدمة ياسر كوم بكل سرعة وسهولة</p>
+        <div class="cta-btns">
+            <a href="https://wa.me/249991140405" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fab fa-whatsapp"></i> <span data-i18n="ctaWa">واتساب</span></a>
+            <a href="mailto:yasercom@outlook.sa" class="btn btn-ghost"><i class="fas fa-envelope"></i> <span data-i18n="ctaMail">راسلنا</span></a>
+        </div>
+    </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section class="section section-alt" id="contact">
+    <div class="inner">
+        <div class="section-head">
+            <span class="section-tag" data-i18n="contactTag">تواصل معنا</span>
+            <h2 data-i18n="contactTitle">نحن هنا دائماً</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="contact-grid">
+            <a href="https://wa.me/249991140405" target="_blank" rel="noopener noreferrer" class="contact-card">
+                <div class="cc-icon cc-wa"><i class="fab fa-whatsapp"></i></div>
+                <div class="cc-info">
+                    <h4 data-i18n="wa1">واتساب 1</h4>
+                    <p>+249 991 140 405</p>
+                    <p style="color:var(--accent);font-size:0.8rem;" data-i18n="available">🟢 متاح الآن</p>
+                </div>
+            </a>
+            <a href="https://wa.me/249911178728" target="_blank" rel="noopener noreferrer" class="contact-card">
+                <div class="cc-icon cc-wa2"><i class="fab fa-whatsapp"></i></div>
+                <div class="cc-info">
+                    <h4 data-i18n="wa2">واتساب 2</h4>
+                    <p>+249 911 178 728</p>
+                    <p style="color:var(--accent);font-size:0.8rem;" data-i18n="available">🟢 متاح الآن</p>
+                </div>
+            </a>
+            <a href="mailto:yasercom@outlook.sa" class="contact-card">
+                <div class="cc-icon cc-mail"><i class="fas fa-envelope"></i></div>
+                <div class="cc-info">
+                    <h4 data-i18n="emailLabel">البريد الإلكتروني</h4>
+                    <p>yasercom@outlook.sa</p>
+                    <p style="color:var(--muted);font-size:0.8rem;" data-i18n="replyHours">رد خلال ساعات</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="foot-brand">
+            <!-- Footer Logo -->
+            <div class="footer-logo-wrap">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="footer-logo-svg">
+                  <circle cx="50" cy="50" r="48" fill="#1a3a8a"/>
+                  <g fill="#FFD700">
+                    <circle cx="50" cy="50" r="9"/>
+                    <polygon points="50,41 56,50 50,59 44,50"/>
+                    <g id="farm">
+                      <rect x="48" y="20" width="4" height="14" rx="2"/>
+                      <path d="M43,19 Q50,13 57,19" stroke="#FFD700" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                      <path d="M39,15 Q50,8 61,15" stroke="#FFD700" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    </g>
+                    <use href="#farm" transform="rotate(45,50,50)"/>
+                    <use href="#farm" transform="rotate(90,50,50)"/>
+                    <use href="#farm" transform="rotate(135,50,50)"/>
+                    <use href="#farm" transform="rotate(180,50,50)"/>
+                    <use href="#farm" transform="rotate(225,50,50)"/>
+                    <use href="#farm" transform="rotate(270,50,50)"/>
+                    <use href="#farm" transform="rotate(315,50,50)"/>
+                  </g>
+                </svg>
+                <span class="logo-text">ياسر <span>كوم</span></span>
+            </div>
+            <p data-i18n="footBrand">خدمات تقنية ومالية متكاملة تخدم عملاءنا في السودان وخارجه.</p>
+        </div>
+        <div class="foot-col">
+            <h5 data-i18n="footLinks">روابط سريعة</h5>
+            <ul>
+                <li><a href="#hero" data-i18n="navHome">الرئيسية</a></li>
+                <li><a href="#services" data-i18n="navServices">الخدمات</a></li>
+                <li><a href="#payments" data-i18n="navPayments">مواقع الدفع</a></li>
+                <li><a href="#about" data-i18n="navAbout">حول</a></li>
+                <li><a href="#contact" data-i18n="navContact">تواصل معنا</a></li>
+            </ul>
+        </div>
+        <div class="foot-col">
+            <h5 data-i18n="footSvcs">خدماتنا</h5>
+            <ul>
+                <li><a href="#" onclick="openModal('اشتراكات ستارلينك');return false;" data-i18n="svc1Title">ستارلينك</a></li>
+                <li><a href="#" onclick="openModal('فيزا وماستر كارد');return false;" data-i18n="svc2Title">فيزا وماستر كارد</a></li>
+                <li><a href="#" onclick="openModal('استرجاع الحسابات الضائعة');return false;" data-i18n="svc3Title">استرجاع الحسابات</a></li>
+                <li><a href="#" onclick="openModal('الدفع للمواقع العالمية');return false;" data-i18n="svc4Title">الدفع العالمي</a></li>
+                <li><a href="#" onclick="openModal('الدعم الفني على مدار الساعة');return false;" data-i18n="svc5Title">الدعم الفني</a></li>
+            </ul>
+        </div>
+        <div class="foot-col">
+            <h5 data-i18n="footContact">اتصل بنا</h5>
+            <p><i class="fas fa-envelope" style="color:var(--accent)"></i> yasercom@outlook.sa</p>
+            <p><i class="fab fa-whatsapp" style="color:#25D366"></i> +249 991 140 405</p>
+            <p><i class="fab fa-whatsapp" style="color:#25D366"></i> +249 911 178 728</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-bottom-logo">
+            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" class="foot-mini-logo">
+              <circle cx="30" cy="30" r="29" fill="#1a3a8a"/>
+              <g fill="#FFD700">
+                <circle cx="30" cy="30" r="6"/>
+                <polygon points="30,24 34,30 30,36 26,30"/>
+                <g id="marm">
+                  <rect x="28.5" y="12" width="3" height="9" rx="1.5"/>
+                  <path d="M25,11 Q30,7 35,11" stroke="#FFD700" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+                </g>
+                <use href="#marm" transform="rotate(45,30,30)"/>
+                <use href="#marm" transform="rotate(90,30,30)"/>
+                <use href="#marm" transform="rotate(135,30,30)"/>
+                <use href="#marm" transform="rotate(180,30,30)"/>
+                <use href="#marm" transform="rotate(225,30,30)"/>
+                <use href="#marm" transform="rotate(270,30,30)"/>
+                <use href="#marm" transform="rotate(315,30,30)"/>
+              </g>
+            </svg>
+        </div>
+        <p data-i18n="footCopy">© 2026 ياسر كوم – جميع الحقوق محفوظة &nbsp;|&nbsp; نحن لا نتبع لشركة ستارلينك</p>
+    </div>
+</footer>
+
+<!-- ══ MODAL: تواصل ══ -->
+<div class="modal-bg" id="modal">
+    <div class="modal-box">
+        <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+        <div class="modal-icon" id="mIcon">📡</div>
+        <h3 data-i18n="modalTitle">تواصل معنا</h3>
+        <p class="modal-svc" id="mSvc"></p>
+        <div class="modal-btns">
+            <a id="waLink1" href="https://wa.me/249991140405" target="_blank" rel="noopener noreferrer" class="m-btn m-btn-wa">
+                <i class="fab fa-whatsapp"></i> واتساب — 0991 140 405
+            </a>
+            <a id="waLink2" href="https://wa.me/249911178728" target="_blank" rel="noopener noreferrer" class="m-btn m-btn-wa">
+                <i class="fab fa-whatsapp"></i> واتساب — 0911 178 728
+            </a>
+            <a href="mailto:yasercom@outlook.sa" class="m-btn m-btn-mail">
+                <i class="fas fa-envelope"></i> <span data-i18n="mailBtn">راسلنا عبر الإيميل</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ══ MODAL: حاسبة العملات ══ -->
+<div class="modal-bg" id="calcModal">
+    <div class="modal-box calc-modal-box">
+        <button class="modal-close" onclick="closeCalcModal()"><i class="fas fa-times"></i></button>
+        <div class="modal-icon">💱</div>
+        <h3 data-i18n="calcFabTitle">حاسبة العملات</h3>
+        <div class="calc-fab-live" style="justify-content:center;margin:0.75rem 0;">
+            <span data-i18n="calcLiveRate">سعر الدولار الآن:</span>
+            <span class="calc-live-val" id="calcLiveVal">—</span>
+            <span data-i18n="calcLiveSdg">ج.س</span>
+            <span class="calc-live-dot" id="calcLiveDot"></span>
+        </div>
+        <div class="calc-modal-grid">
+            <div class="calc-currency-card active-cur" id="cur-USD" onclick="selectCurrency('USD')">
+                <span class="cur-flag">🇺🇸</span><span class="cur-code">USD</span><span class="cur-rate" id="rate-USD">—</span><span class="cur-name" data-i18n="cn_USD">دولار أمريكي</span>
+            </div>
+            <div class="calc-currency-card" id="cur-SAR" onclick="selectCurrency('SAR')">
+                <span class="cur-flag">🇸🇦</span><span class="cur-code">SAR</span><span class="cur-rate" id="rate-SAR">—</span><span class="cur-name" data-i18n="cn_SAR">ريال سعودي</span>
+            </div>
+            <div class="calc-currency-card" id="cur-AED" onclick="selectCurrency('AED')">
+                <span class="cur-flag">🇦🇪</span><span class="cur-code">AED</span><span class="cur-rate" id="rate-AED">—</span><span class="cur-name" data-i18n="cn_AED">درهم إماراتي</span>
+            </div>
+            <div class="calc-currency-card" id="cur-KWD" onclick="selectCurrency('KWD')">
+                <span class="cur-flag">🇰🇼</span><span class="cur-code">KWD</span><span class="cur-rate" id="rate-KWD">—</span><span class="cur-name" data-i18n="cn_KWD">دينار كويتي</span>
+            </div>
+            <div class="calc-currency-card" id="cur-EUR" onclick="selectCurrency('EUR')">
+                <span class="cur-flag">🇪🇺</span><span class="cur-code">EUR</span><span class="cur-rate" id="rate-EUR">—</span><span class="cur-name" data-i18n="cn_EUR">يورو</span>
+            </div>
+            <div class="calc-currency-card" id="cur-GBP" onclick="selectCurrency('GBP')">
+                <span class="cur-flag">🇬🇧</span><span class="cur-code">GBP</span><span class="cur-rate" id="rate-GBP">—</span><span class="cur-name" data-i18n="cn_GBP">جنيه إسترليني</span>
+            </div>
+            <div class="calc-currency-card" id="cur-TRY" onclick="selectCurrency('TRY')">
+                <span class="cur-flag">🇹🇷</span><span class="cur-code">TRY</span><span class="cur-rate" id="rate-TRY">—</span><span class="cur-name" data-i18n="cn_TRY">ليرة تركية</span>
+            </div>
+            <div class="calc-currency-card" id="cur-EGP" onclick="selectCurrency('EGP')">
+                <span class="cur-flag">🇪🇬</span><span class="cur-code">EGP</span><span class="cur-rate" id="rate-EGP">—</span><span class="cur-name" data-i18n="cn_EGP">جنيه مصري</span>
+            </div>
+            <div class="calc-currency-card" id="cur-QAR" onclick="selectCurrency('QAR')">
+                <span class="cur-flag">🇶🇦</span><span class="cur-code">QAR</span><span class="cur-rate" id="rate-QAR">—</span><span class="cur-name" data-i18n="cn_QAR">ريال قطري</span>
+            </div>
+            <div class="calc-currency-card" id="cur-BHD" onclick="selectCurrency('BHD')">
+                <span class="cur-flag">🇧🇭</span><span class="cur-code">BHD</span><span class="cur-rate" id="rate-BHD">—</span><span class="cur-name" data-i18n="cn_BHD">دينار بحريني</span>
+            </div>
+            <div class="calc-currency-card" id="cur-OMR" onclick="selectCurrency('OMR')">
+                <span class="cur-flag">🇴🇲</span><span class="cur-code">OMR</span><span class="cur-rate" id="rate-OMR">—</span><span class="cur-name" data-i18n="cn_OMR">ريال عماني</span>
+            </div>
+            <div class="calc-currency-card" id="cur-CNY" onclick="selectCurrency('CNY')">
+                <span class="cur-flag">🇨🇳</span><span class="cur-code">CNY</span><span class="cur-rate" id="rate-CNY">—</span><span class="cur-name" data-i18n="cn_CNY">يوان صيني</span>
+            </div>
+            <div class="calc-currency-card" id="cur-JPY" onclick="selectCurrency('JPY')">
+                <span class="cur-flag">🇯🇵</span><span class="cur-code">JPY</span><span class="cur-rate" id="rate-JPY">—</span><span class="cur-name" data-i18n="cn_JPY">ين ياباني</span>
+            </div>
+            <div class="calc-currency-card" id="cur-CHF" onclick="selectCurrency('CHF')">
+                <span class="cur-flag">🇨🇭</span><span class="cur-code">CHF</span><span class="cur-rate" id="rate-CHF">—</span><span class="cur-name" data-i18n="cn_CHF">فرنك سويسري</span>
+            </div>
+            <div class="calc-currency-card" id="cur-CAD" onclick="selectCurrency('CAD')">
+                <span class="cur-flag">🇨🇦</span><span class="cur-code">CAD</span><span class="cur-rate" id="rate-CAD">—</span><span class="cur-name" data-i18n="cn_CAD">دولار كندي</span>
+            </div>
+            <div class="calc-currency-card" id="cur-AUD" onclick="selectCurrency('AUD')">
+                <span class="cur-flag">🇦🇺</span><span class="cur-code">AUD</span><span class="cur-rate" id="rate-AUD">—</span><span class="cur-name" data-i18n="cn_AUD">دولار أسترالي</span>
+            </div>
+            <div class="calc-currency-card" id="cur-INR" onclick="selectCurrency('INR')">
+                <span class="cur-flag">🇮🇳</span><span class="cur-code">INR</span><span class="cur-rate" id="rate-INR">—</span><span class="cur-name" data-i18n="cn_INR">روبية هندية</span>
+            </div>
+        </div>
+        <div class="calc-input-row">
+            <div class="input-g">
+                <label data-i18n="calcAmtLabel">المبلغ</label>
+                <input type="number" id="modalAmt" value="1" min="0" step="any">
+            </div>
+            <div class="calc-result-display">
+                <div class="calc-fab-result" id="modalResult">—</div>
+                <div class="calc-fab-eq" id="modalEq"></div>
+            </div>
+        </div>
+        <p class="calc-fab-warning" style="margin-top:0.75rem;">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span data-i18n="calcWarning">⚠️ الأسعار تقريبية وقابلة للتغيير — تتحدث تلقائياً بين 4800 و4970 ج.س للدولار</span>
+        </p>
+    </div>
+</div>
+
+<!-- ══ FLOATING CALC BTN ══ -->
+<div class="calc-fab-wrap" id="calcFabWrap">
+    <button class="calc-fab-btn" id="calcFabBtn" aria-label="حاسبة العملات" onclick="openCalcModal()">
+        <i class="fas fa-calculator"></i>
+        <span class="fab-badge">$</span>
+    </button>
+</div>
+
+<!-- BTT -->
+<button id="btt" aria-label="العودة للأعلى">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
